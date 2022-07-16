@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("LightAttack");
             animator.SetInteger("ComboStep", comboStep);
         }
-        if (Input.GetKeyDown(KeyCode.RightShift) && !isAttack)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !isAttack)
         {
             isAttack = true;
             attackType = "Heavy";
@@ -113,6 +113,7 @@ public class PlayerController : MonoBehaviour
 
     public void AttackOver()
     {
+        Debug.Log("123");
         isAttack = false;
     }
 
